@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+body {
+  background-color: #e6e9f0;
+}
+.navigation {
+  background-color: #dde3e7;
+  box-shadow: 0px 0px 5px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+.nav-links {
+  display: flex !important;
+}
+button {
+  box-shadow: none !important;
+}
+.badge {
+  border-radius: 50% !important;
+  padding: 3px 5px;
+}
+.offcanvas {
+  background-color: #e6e9f0;
+  cursor: auto;
+}
+.parent-card-img {
+  height: 300px;
+}
+.card {
+  background-color: #e6e9f0;
+  border: none !important;
+  box-shadow: 0px 0px 5px 1px;
+  cursor: pointer;
+}
+.card-img {
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: 0.3s ease-in-out;
+}
+.cart-img-cont{
+width: 150px;
+}
+.cart-img {
+  mix-blend-mode: multiply;
+}
+.home-img{
+  mix-blend-mode:darken;
+}
+.card-img:hover {
+  scale: 1.04;
+}
+.detail-img {
+  mix-blend-mode: multiply;
+}
+.card-cart {
+  box-shadow: 0px 0px 5px 1px;
+  border-radius: 2px;
+}
+.footer {
+  background-color: #d4d7da;
+}
+/* Small */
+@media screen and (max-width: 575px) {
+  .offcanvas {
+    width: 90vw !important;
+  }
+}
+/* Medium */
+@media screen and (min-width: 576px) and (min-width: 767px) {
+  .offcanvas {
+    width: 40vw !important;
+  }
+}
+/* Large */
+@media screen and (min-width: 768px) {
+  .offcanvas {
+    width: 37vw !important;
+  }
+}
