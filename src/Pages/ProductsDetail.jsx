@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AddToCart } from '../Redux/CartReducer'
 
 const ProductsDetail = () => {
-    const { productId } = useParams()
-    const {ProductReducer}=useSelector(state=>state)
-    const CartProduct = ProductReducer.value.find((item) => item.id == productId)
-    const filteredProduct = ProductReducer.value.filter((item)=> item.id == productId)
-    const dispatch = useDispatch()
+    const { productId } = useParams();
+    const {ProductReducer}=useSelector(state=>state);
+    const CartProduct = ProductReducer.value.find((item) => item.id == productId);
+    const filteredProduct = ProductReducer.value.filter((item)=> item.id == productId);
+    const dispatch = useDispatch();
     const handleAddToCart = () => {
-        dispatch(AddToCart(CartProduct))
+        dispatch(AddToCart(CartProduct));
     }
     return (
         <div className='mt-5 ps-md-5 pe-md-5 ps-3 pe-3 pt-5'>
@@ -48,6 +48,7 @@ const ProductsDetail = () => {
                     )
                 }
             </center>
+            <ToastContainer />
         </div>
     )
 }

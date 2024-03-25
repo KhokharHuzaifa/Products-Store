@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from "react-redux"
 import { delCartProduct } from "../Redux/CartReducer"
 
 function HeaderNav() {
-    const { CartReducer } = useSelector(state => state)
-    const dispatch = useDispatch()
+    const { CartReducer } = useSelector(state => state);
+    const dispatch = useDispatch();
     const handleDelProduct = (id) => {
-        dispatch(delCartProduct(id))
+        dispatch(delCartProduct(id));
     }
-   
     return (
         <div>
             <nav className="navigation container-fluid fixed-top">
@@ -43,7 +42,7 @@ function HeaderNav() {
                                                     <center>
                                                         <b className="text-secondary">{item.title}</b><br />
                                                         <b>Total : </b><b className="text-primary">{item.price} $</b><br />
-                                                        <i class="ri-delete-bin-6-line btn btn-danger mt-2 ms-3" onClick={() => handleDelProduct(item.id)}></i>
+                                                        <i className="ri-delete-bin-6-line btn btn-danger mt-2 ms-3" onClick={() => handleDelProduct(item.id)}></i>
                                                     </center>
                                                     
                                                 </div>
@@ -55,6 +54,7 @@ function HeaderNav() {
                     </span>
                 </div>
             </nav>
+            <ToastContainer />
         </div>
     )
 }

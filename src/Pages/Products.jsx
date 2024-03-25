@@ -5,7 +5,7 @@ import { StoreProducts } from "../Redux/ProductsReducer";
 
 function Products() {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then((res) => res.json())
