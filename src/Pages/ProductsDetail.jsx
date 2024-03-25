@@ -48,7 +48,6 @@ const ProductsDetail = () => {
                     )
                 }
             </center>
-            <ToastContainer />
         </div>
     )
 }

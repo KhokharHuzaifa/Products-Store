@@ -54,7 +54,6 @@ function HeaderNav() {
                     </span>
                 </div>
             </nav>
-            <ToastContainer />
         </div>
     )
 }
