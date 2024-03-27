@@ -5,7 +5,7 @@ import { AddToCart } from '../Redux/CartReducer'
 const ProductsDetail = () => {
     const { productId } = useParams();
     const {ProductReducer}=useSelector(state=>state);
-    const CartProduct = ProductReducer.value.find((item) => item.id == productId);
+    const CartProduct = ProductReducer.value.find((item) => item.id == productId)
     const filteredProduct = ProductReducer.value.filter((item)=> item.id == productId);
     const dispatch = useDispatch();
     const handleAddToCart = () => {

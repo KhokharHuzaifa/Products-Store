@@ -10,7 +10,7 @@ function Products() {
         fetch('https://fakestoreapi.com/products')
             .then((res) => res.json())
             .then((data) => dispatch(StoreProducts(data)));
-    }, [])
+    },[])
     const {ProductReducer}=useSelector(state=>state);
 
     return (
@@ -24,7 +24,10 @@ function Products() {
                 {
                     ProductReducer.value.length < 1 ?
                      <center>
-                            <div className="spinner-grow" role="status" style={{ width: '3rem', height: '3rem' }}></div>
+                            {/* <div className="spinner-grow" role="status" style={{ width: '3rem', height: '3rem' }}></div> */}
+                            <div class="loadingio-spinner-dual-ball-9zdirejdgzo"><div class="ldio-zqyrg68si2c">
+                                <div></div><div></div><div></div>
+                            </div></div>
                      </center> 
                      : 
                         ProductReducer.value.map((items, idx) => <Card items={items} key={idx} idx={idx} />)

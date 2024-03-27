@@ -9,6 +9,79 @@
 body {
   background-color: #e6e9f0;
 }
+
+@keyframes ldio-zqyrg68si2c-o {
+  0% {
+    opacity: 1;
+    transform: translate(0 0);
+  }
+  49.99% {
+    opacity: 1;
+    transform: translate(65.28px, 0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(65.28px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+@keyframes ldio-zqyrg68si2c {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(65.28px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.ldio-zqyrg68si2c div {
+  position: absolute;
+  width: 65.28px;
+  height: 65.28px;
+  border-radius: 50%;
+  top: 69.36px;
+  left: 36.72px;
+}
+.ldio-zqyrg68si2c div:nth-child(1) {
+  background: #1f1f1f;
+  animation: ldio-zqyrg68si2c 0.9615384615384615s linear infinite;
+  animation-delay: -0.4807692307692307s;
+}
+.ldio-zqyrg68si2c div:nth-child(2) {
+  background: #d4d7da;
+  animation: ldio-zqyrg68si2c 0.9615384615384615s linear infinite;
+  animation-delay: 0s;
+}
+.ldio-zqyrg68si2c div:nth-child(3) {
+  background: #1f1f1f;
+  animation: ldio-zqyrg68si2c-o 0.9615384615384615s linear infinite;
+  animation-delay: -0.4807692307692307s;
+}
+.loadingio-spinner-dual-ball-9zdirejdgzo {
+  width: 204px;
+  height: 204px;
+  display: inline-block;
+  overflow: hidden;
+  background: #f1f2f3;
+  mix-blend-mode: darken;
+}
+.ldio-zqyrg68si2c {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.ldio-zqyrg68si2c div {
+  box-sizing: content-box;
+}
+
 .navigation {
   background-color: #dde3e7;
   box-shadow: 0px 0px 5px 1px;
@@ -46,14 +119,14 @@ button {
   mix-blend-mode: multiply;
   transition: 0.3s ease-in-out;
 }
-.cart-img-cont{
-width: 150px;
+.cart-img-cont {
+  width: 150px;
 }
 .cart-img {
   mix-blend-mode: multiply;
 }
-.home-img{
-  mix-blend-mode:darken;
+.home-img {
+  mix-blend-mode: darken;
 }
 .card-img:hover {
   scale: 1.04;
@@ -64,6 +137,11 @@ width: 150px;
 .card-cart {
   box-shadow: 0px 0px 5px 1px;
   border-radius: 2px;
+  cursor: auto;
+}
+.ri-delete-bin-6-line{
+  cursor: pointer;
+  filter: saturate(2);
 }
 .footer {
   background-color: #d4d7da;

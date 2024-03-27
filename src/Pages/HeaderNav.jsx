@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { delCartProduct } from "../Redux/CartReducer"
 
 function HeaderNav() {
+
     const { CartReducer } = useSelector(state => state);
     const dispatch = useDispatch();
     const handleDelProduct = (id) => {
@@ -32,23 +33,35 @@ function HeaderNav() {
                                 {
                                     CartReducer.value < 1 ? <center className="mt-5">
                                         <h4 className="text-danger">Oops Cart is empty</h4>
-                                        </center>:
+                                    </center> :
                                         CartReducer.value.map((item, idx) =>
-                                            <div key={idx} className="d-flex card-cart pb-3 pb-md-2 mt-4 pt-3 pt-md-2">
-                                                <div className="cart-img-cont">
-                                                    <img src={item.image} alt="" className="img-fluid cart-img ms-2 mt-2"/>
+                                                <div key={idx} className="card-cart mt-4 card">
+                                                    <div className="mt-md-3 mt-2 mt-md-0">
+                                                        <center>
+                                                            <b className="text-secondary container">{item.title}</b><br />
+                                                            <div className="cart-img-cont">
+                                                                <img src={item.image} alt="" className="img-fluid cart-img mt-2 mb-2" />
+                                                            </div>
+                                                            <div className="bg-dark d-flex text-light justify-content-around align-items-center">
+                                                                <div>
+                                                                    <>Price : </><b>{item.price}$</b>
+                                                                </div>
+                                                                <div>
+                                                                    <i className="ri-delete-bin-6-line fs-4 ms-3 text-danger" onClick={() => handleDelProduct(item.id)}></i>
+                                                                </div>
+                                                            </div>
+                                                        </center>
+                                                    </div>
                                                 </div>
-                                                <div className="mt-md-3 container ms-2 mt-2 mt-md-0">
-                                                    <center>
-                                                        <b className="text-secondary">{item.title}</b><br />
-                                                        <b>Total : </b><b className="text-primary">{item.price} $</b><br />
-                                                        <i className="ri-delete-bin-6-line btn btn-danger mt-2 ms-3" onClick={() => handleDelProduct(item.id)}></i>
-                                                    </center>
-                                                    
-                                                </div>
-                                            </div>
                                         )
                                 }
+
+                            </div>
+                            <div className="container bg-warning pt-2 ">
+                                <h3>Total Price : {
+                                    Math.floor(CartReducer.value.reduce((total, item) => total + item.price, 0))
+                                }$
+                                </h3>
                             </div>
                         </div>
                     </span>
