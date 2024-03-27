@@ -6,7 +6,9 @@ function HeaderNav() {
 
     const { CartReducer } = useSelector(state => state);
     const dispatch = useDispatch();
-   
+    const handleDelProduct = (id) => {
+        dispatch(delCartProduct(id));
+    }
     return (
         <div>
             <nav className="navigation container-fluid fixed-top">
